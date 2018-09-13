@@ -9,18 +9,21 @@
  */
 const truncate = (str, length = 0, replacer = '...') => {
   var arr = [];
-  if (str.length > 0){
-  	for(let i=0; i<length; i++){
-      	arr+= str[i];
-  	}
-  	return arr + replacer;
+  let len = str.length - length - replacer.length;
 
-} else {
+  if (str === '' || str.length < length) {
+
+  	return str
+
+  } else if (str.length > length ){
+
+  	return str.slice(0,len).concat(replacer);
+
+  } else {
+
  	return new Error('this is not a string');
 }
   
 };
-
-
 
 export default truncate;
