@@ -13,6 +13,9 @@ const sum = (a, b) => {
 	if (isFinite(a) && isFinite(b)){
   		return a + b
 	}	
+	else{
+		throw "Error"
+	}
 };
 
 export default sum;
