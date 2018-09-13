@@ -8,7 +8,19 @@
  * @return {string} truncated string
  */
 const truncate = (str, length = 0, replacer = '...') => {
-  /* your logic here...*/
+  var arr = [];
+  if (str.length > 0){
+  	for(let i=0; i<length; i++){
+      	arr+= str[i];
+  	}
+  	return arr + replacer;
+
+} else {
+ 	return new Error('this is not a string');
+}
+  
 };
+
+
 
 export default truncate;

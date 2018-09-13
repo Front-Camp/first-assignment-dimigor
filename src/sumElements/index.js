@@ -11,9 +11,21 @@
  * sumElements([Infinity, NaN, 1]); // 1
  */
 const sumElements = arr => {
-	let numb = n => isFinite(+n) ? +n : 0 ;
+	const numb = n => {
+		n = parseFloat(n);
+		if (isFinite(n)) {
+			return n
+		} else {
+			return 0
+		}
+	}
+	// let numb = arr.filter((a) => {
+ //    if (Number(a) && isFinite(a)) { return parseFloat(a); }
+	// });
+
+
 	return arr.reduce((a, b) => numb(a) + numb(b));
-	
+
 };
 
 export default sumElements;

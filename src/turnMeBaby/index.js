@@ -8,11 +8,11 @@
  * turnMeBaby('Some text'); // 'txet emoS'
  */
 const turnMeBaby = str => {
-  if (typeof str !== 'string') {
-    return  new Error('this is not a string');
+  if (typeof str === 'string') {
+    return str.split("").reverse().join("");
+  } else {
+  	return new Error('this is not a string');
   }
-
-  return str.split("").reverse().join("");
 };
 
 

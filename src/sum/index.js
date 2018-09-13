@@ -10,11 +10,11 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
-	if (isFinite(a) && isFinite(b)){
+	if (isFinite(a) && isFinite(b) && !isNaN(a) && !isNaN(b) && typeof a !== 'string' && typeof b !== 'string'){
   		return a + b
 	}	
 	else{
-		throw "Error"
+		throw new Error(); 
 	}
 };
 
