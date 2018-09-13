@@ -11,7 +11,7 @@
  * sumElements([Infinity, NaN, 1]); // 1
  */
 const sumElements = arr => {
-	let numb = n => isFinite(n) ? +n : 0 ;
+	let numb = n => isFinite(+n) ? +n : 0 ;
 	return arr.reduce((a, b) => numb(a) + numb(b));
 	
 };

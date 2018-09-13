@@ -7,13 +7,13 @@ describe('isObject::', () => {
   });
 
   /** @test {isObject} */
-  it('Should return true for array literal []', () => {
-    expect(isObject([])).toEqual(true);
+  it('Should return false for array literal []', () => {
+    expect(isObject([])).toEqual(false);
   });
 
   /** @test {isObject} */
-  it('Should return true for null', () => {
-    expect(isObject(null)).toEqual(true);
+  it('Should return false for null', () => {
+    expect(isObject(null)).toEqual(false);
   });
 
   /** @test {isObject} */
