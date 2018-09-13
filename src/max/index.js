@@ -9,13 +9,11 @@
 const max = arr => {
   let max = arr[0];
 	 for(let i=1; i<arr.length; i++){
-	 	if (arr[i] !== Infinity && arr[i] !== NaN){
+	 	if (isFinite((arr[i])){
 	   		if(arr[i] > max){
 	     		max = arr[i];   
 	   		}
-		} else{
-			throw "Error";
-		}
+		} 
 	 }
 	return max;
 };

@@ -10,7 +10,9 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
-  return a + b
+	if (isFinite(a) && isFinite(b)){
+  		return a + b
+	}	
 };
 
 export default sum;
